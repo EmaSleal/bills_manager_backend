@@ -1,0 +1,25 @@
+server:
+  port: 8585
+spring:
+
+  #application name
+  application:
+    name: Facturas-Backend
+
+  # Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.100.111:5432/facturas #change this to your ip address
+    username: postgres #change this to your username
+    password: postgres1234-  #change this to your password
+
+  # JPA properties
+  jpa:
+    hibernate:
+      # When you launch the application for the first time - switch "none" at "create"
+      ddl-auto: create
+    show-sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+
